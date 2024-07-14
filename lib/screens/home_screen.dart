@@ -2,7 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../res/app_styles.dart';
+import 'package:ticket_app/res/media.dart';
+import '../res/Styles/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -38,14 +39,16 @@ class HomeScreen extends StatelessWidget {
                       height: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.red,
+                        image: DecorationImage(
+                          image: AssetImage(AppMedia.logo)
+                        )
                       ),
                     )
                   ],
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [Text("Search Icon"), Text("Empty Space")],
+                  children: [Text("Search Icon"),],
                 )
               ],
             ),
