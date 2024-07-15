@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ticket_app/res/Styles/app_styles.dart';
 
 class AppDoubleText extends StatelessWidget {
   const AppDoubleText({super.key, required this.bigText, required this.smallText });
@@ -9,6 +10,19 @@ class AppDoubleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(height: 40, width: 40, color: Colors.red);
+    return Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(bigText, style: AppStyles.headlineStyle2),
+        InkWell(
+          child:  Text(smallText, style: AppStyles.textStyle.copyWith(
+            color: AppStyles.primaryColor
+          )) ,
+          onTap: () {
+
+          },
+        )
+      ],
+    );
   }
 }
