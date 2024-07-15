@@ -57,18 +57,19 @@ class HomeScreen extends StatelessWidget {
                   ),
                   child: const Row(
                     children: [
-                      Icon(FluentSystemIcons.ic_fluent_search_regular, 
+                      Icon(FluentSystemIcons.ic_fluent_search_regular,
                       color: Color(0xFFBFC205),
                       ),
                       Text("Search")
                     ],
                   )
-                )
+                ),
+                const SizedBox(height: 40),
+                const AppDoubleText(bigText: "Upcoming Flights", smallText: "View all")
               ],
             ),
           ),
-          const SizedBox(height: 40),
-          const AppDoubleText(bigText: "Upcoming Flights", smallText: "View all")
+
         ],
       ),
     );
