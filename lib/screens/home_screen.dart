@@ -41,37 +41,37 @@ class HomeScreen extends StatelessWidget {
                       width: 50,
                       height: 50,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          image: AssetImage(AppMedia.logo)
-                        )
-                      ),
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage(AppMedia.logo))),
                     )
                   ],
                 ),
-              SizedBox(height: 25),
+                const SizedBox(height: 25),
                 Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color(0xFFF4F6FD)
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(FluentSystemIcons.ic_fluent_search_regular,
-                      color: Color(0xFFBFC205),
-                      ),
-                      Text("Search")
-                    ],
-                  )
-                ),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 12, vertical: 12),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color(0xFFF4F6FD)),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          FluentSystemIcons.ic_fluent_search_regular,
+                          color: Color(0xFFBFC205),
+                        ),
+                        Text("Search")
+                      ],
+                    )),
                 const SizedBox(height: 40),
                 const AppDoubleText(bigText: "Upcoming Flights", smallText: "View all"),
+                const SizedBox(
+                  height: 20,
+                ),
                 const TicketView()
               ],
             ),
           ),
-
         ],
       ),
     );
