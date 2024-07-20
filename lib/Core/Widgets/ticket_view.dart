@@ -14,7 +14,7 @@ class TicketView extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return SizedBox(
         width: size.width * 0.85,
-        height: 188,
+        height: 250,
         child: Container(
           margin: const EdgeInsets.only(right: 16),
           child: Column(
@@ -71,22 +71,29 @@ class TicketView extends StatelessWidget {
                     // Dates and Time
                     Row(
                       children: [
-                        Text(
-                          "New York",
-                          style: AppStyles.headlineStyle3
-                              .copyWith(color: Colors.white),
+                        SizedBox(
+                          width: 100,
+                          child: Text(
+                            "New York",
+                            style: AppStyles.headlineStyle4
+                                .copyWith(color: Colors.white),
+                          ),
                         ),
                         Expanded(child: Container()),
                         Text(
                           "4H20",
-                          style: AppStyles.headlineStyle3
+                          style: AppStyles.headlineStyle4
                               .copyWith(color: Colors.white),
                         ),
                         Expanded(child: Container()),
-                        Text(
-                          "South Africa",
-                          style: AppStyles.headlineStyle3
-                              .copyWith(color: Colors.white),
+                        SizedBox(
+                          width: 100,
+                          child: Text(
+                            "South Africa",
+                            textAlign: TextAlign.end,
+                            style: AppStyles.headlineStyle4
+                                .copyWith(color: Colors.white),
+                          ),
                         ),
                       ],
                     )
@@ -118,33 +125,21 @@ class TicketView extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "NYC",
+                          "1 JUNE",
                           style: AppStyles.headlineStyle3
                               .copyWith(color: Colors.white),
                         ),
                         Expanded(child: Container()),
-                        const BigDot(),
                         Expanded(
                             child: Stack(children: [
-                          const SizedBox(
+                           SizedBox(
                               height: 24,
-                              child: AppLayoutBuilderWidget(
-                                randomDivider: 5,
-                              )),
-                          Center(
-                            child: Transform.rotate(
-                              angle: 1.5,
-                              child: const Icon(
-                                Icons.local_airport_rounded,
-                                color: Colors.white,
-                              ),
-                            ),
-                          )
+                              child: Container(),),
+                          Center(child: Text("07:00AM", style: AppStyles.headlineStyle3.copyWith(color: Colors.white),))
                         ])),
-                        const BigDot(),
                         Expanded(child: Container()),
                         Text(
-                          "RSA",
+                          "13",
                           style: AppStyles.headlineStyle3
                               .copyWith(color: Colors.white),
                         ),
@@ -157,20 +152,20 @@ class TicketView extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "New York",
-                          style: AppStyles.headlineStyle3
+                          "Date",
+                          style: AppStyles.headlineStyle4
                               .copyWith(color: Colors.white),
                         ),
                         Expanded(child: Container()),
                         Text(
-                          "4H20",
-                          style: AppStyles.headlineStyle3
+                          "07:00 AM",
+                          style: AppStyles.headlineStyle4
                               .copyWith(color: Colors.white),
                         ),
                         Expanded(child: Container()),
                         Text(
-                          "South Africa",
-                          style: AppStyles.headlineStyle3
+                          "Number",
+                          style: AppStyles.headlineStyle4
                               .copyWith(color: Colors.white),
                         ),
                       ],
