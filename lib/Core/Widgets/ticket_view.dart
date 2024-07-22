@@ -4,7 +4,9 @@ import 'package:flutter/widgets.dart';
 import 'package:ticket_app/Core/Widgets/app_layoutbuilder.dart';
 import 'package:ticket_app/Core/Widgets/big_circle.dart';
 import 'package:ticket_app/Core/Widgets/big_dot.dart';
+import 'package:ticket_app/Core/Widgets/text_style_third.dart';
 import 'package:ticket_app/res/Styles/app_styles.dart';
+
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -32,11 +34,7 @@ class TicketView extends StatelessWidget {
                     // Departure/Destination names
                     Row(
                       children: [
-                        Text(
-                          "NYC",
-                          style: AppStyles.headlineStyle3
-                              .copyWith(color: Colors.white),
-                        ),
+                        const TextStyleThird(text: "NYC",),
                         Expanded(child: Container()),
                         const BigDot(),
                         Expanded(
@@ -124,10 +122,13 @@ class TicketView extends StatelessWidget {
                     // Departure/Destination names
                     Row(
                       children: [
-                        Text(
-                          "1 JUNE",
-                          style: AppStyles.headlineStyle3
-                              .copyWith(color: Colors.white),
+                        SizedBox(
+                          width: 70,
+                          child: Text(
+                            "1 JUNE",
+                            style: AppStyles.headlineStyle3
+                                .copyWith(color: Colors.white),
+                          ),
                         ),
                         Expanded(child: Container()),
                         Expanded(
@@ -138,10 +139,14 @@ class TicketView extends StatelessWidget {
                           Center(child: Text("07:00AM", style: AppStyles.headlineStyle3.copyWith(color: Colors.white),))
                         ])),
                         Expanded(child: Container()),
-                        Text(
-                          "13",
-                          style: AppStyles.headlineStyle3
-                              .copyWith(color: Colors.white),
+                        SizedBox(
+                          width: 70,
+                          child: Text(
+                            textAlign: TextAlign.end,
+                            "13",
+                            style: AppStyles.headlineStyle3
+                                .copyWith(color: Colors.white),
+                          ),
                         ),
                       ],
                     ),
