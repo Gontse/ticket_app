@@ -113,9 +113,9 @@ class TicketView extends StatelessWidget {
                     Row(
                       children: [
                         SizedBox(
-                          width: 70,
+                          width: 80,
                           child: Text(
-                            "1 JUNE",
+                          ticket["date"],
                             style: AppStyles.headlineStyle3
                                 .copyWith(color: Colors.white),
                           ),
@@ -126,14 +126,14 @@ class TicketView extends StatelessWidget {
                            SizedBox(
                               height: 24,
                               child: Container(),),
-                          Center(child: Text("07:00AM", style: AppStyles.headlineStyle3.copyWith(color: Colors.white),))
+                          Center(child: Text("Depart", style: AppStyles.headlineStyle3.copyWith(color: Colors.white),))
                         ])),
                         Expanded(child: Container()),
                         SizedBox(
-                          width: 70,
+                          width: 90,
                           child: Text(
                             textAlign: TextAlign.end,
-                            "13",
+                            ticket["number"].toString(),
                             style: AppStyles.headlineStyle3
                                 .copyWith(color: Colors.white),
                           ),
@@ -153,7 +153,7 @@ class TicketView extends StatelessWidget {
                         ),
                         Expanded(child: Container()),
                         Text(
-                          "07:00 AM",
+                          ticket["departure_time"],
                           style: AppStyles.headlineStyle4
                               .copyWith(color: Colors.white),
                         ),
