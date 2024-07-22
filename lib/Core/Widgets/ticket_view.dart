@@ -59,7 +59,7 @@ class TicketView extends StatelessWidget {
                         ])),
                         const BigDot(),
                         Expanded(child: Container()),
-                        const TextStyleThird(text: "RSA",),
+                        TextStyleThird(text: ticket["to"]["code"]),
                       ],
                     ),
                     const SizedBox(
@@ -71,17 +71,17 @@ class TicketView extends StatelessWidget {
                         SizedBox(
                           width: 100,
                           child: Text(
-                            "New York",
+                            ticket["from"]["name"],
                             style: AppStyles.headlineStyle4
                                 .copyWith(color: Colors.white),
                           ),
                         ),
                         Expanded(child: Container()),
-                        const TextStyleFourth(text: "4H20"),
+                         TextStyleFourth(text: ticket["flying_time"]),
                         Expanded(child: Container()),
-                        const SizedBox(
+                         SizedBox(
                           width: 100,
-                          child: TextStyleFourth(text: "South Africa"),
+                          child: TextStyleFourth(text: ticket["to"]["name"]),
                         ),
                       ],
                     )
