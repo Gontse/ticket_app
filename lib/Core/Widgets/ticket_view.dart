@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:ticket_app/Core/Widgets/app_layoutbuilder.dart';
 import 'package:ticket_app/Core/Widgets/big_circle.dart';
 import 'package:ticket_app/Core/Widgets/big_dot.dart';
+import 'package:ticket_app/Core/Widgets/text_style_fourth.dart';
 import 'package:ticket_app/Core/Widgets/text_style_third.dart';
 import 'package:ticket_app/res/Styles/app_styles.dart';
 
@@ -56,11 +57,7 @@ class TicketView extends StatelessWidget {
                         ])),
                         const BigDot(),
                         Expanded(child: Container()),
-                        Text(
-                          "RSA",
-                          style: AppStyles.headlineStyle3
-                              .copyWith(color: Colors.white),
-                        ),
+                        const TextStyleThird(text: "RSA",),
                       ],
                     ),
                     const SizedBox(
@@ -78,20 +75,11 @@ class TicketView extends StatelessWidget {
                           ),
                         ),
                         Expanded(child: Container()),
-                        Text(
-                          "4H20",
-                          style: AppStyles.headlineStyle4
-                              .copyWith(color: Colors.white),
-                        ),
+                        const TextStyleFourth(text: "4H20"),
                         Expanded(child: Container()),
-                        SizedBox(
+                        const SizedBox(
                           width: 100,
-                          child: Text(
-                            "South Africa",
-                            textAlign: TextAlign.end,
-                            style: AppStyles.headlineStyle4
-                                .copyWith(color: Colors.white),
-                          ),
+                          child: TextStyleFourth(text: "South Africa"),
                         ),
                       ],
                     )

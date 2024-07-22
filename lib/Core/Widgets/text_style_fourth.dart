@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../res/Styles/app_styles.dart';
 
-class TextStyleThird extends StatelessWidget {
+class TextStyleFourth extends StatelessWidget {
   final String text;
-  const TextStyleThird({super.key, required this.text});
+  const TextStyleFourth({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: AppStyles.headlineStyle3
+      style: AppStyles.headlineStyle4
           .copyWith(color: Colors.white),
     );
   }
