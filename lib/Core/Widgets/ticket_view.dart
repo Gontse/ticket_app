@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ticket_app/Core/Widgets/Utils/TestData/all_json.dart';
 import 'package:ticket_app/Core/Widgets/app_layoutbuilder.dart';
 import 'package:ticket_app/Core/Widgets/big_circle.dart';
 import 'package:ticket_app/Core/Widgets/big_dot.dart';
@@ -10,7 +11,8 @@ import 'package:ticket_app/res/Styles/app_styles.dart';
 
 
 class TicketView extends StatelessWidget {
-  const TicketView({super.key});
+  final Map<String, dynamic> ticket;
+  const TicketView({super.key, required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class TicketView extends StatelessWidget {
                     // Departure/Destination names
                     Row(
                       children: [
-                        const TextStyleThird(text: "NYC",),
+                        TextStyleThird(text: ticket["from"]["code"],),
                         Expanded(child: Container()),
                         const BigDot(),
                         Expanded(
