@@ -126,7 +126,7 @@ class TicketView extends StatelessWidget {
                            SizedBox(
                               height: 24,
                               child: Container(),),
-                          Center(child: Text("Depart", style: AppStyles.headlineStyle3.copyWith(color: Colors.white),))
+                          Center(child: Text(ticket["departure_time"], style: AppStyles.headlineStyle4.copyWith(color: Colors.white),))
                         ])),
                         Expanded(child: Container()),
                         SizedBox(
@@ -153,7 +153,7 @@ class TicketView extends StatelessWidget {
                         ),
                         Expanded(child: Container()),
                         Text(
-                          ticket["departure_time"],
+                          "Departure",
                           style: AppStyles.headlineStyle4
                               .copyWith(color: Colors.white),
                         ),
