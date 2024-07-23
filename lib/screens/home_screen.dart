@@ -22,6 +22,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -78,7 +79,18 @@ class HomeScreen extends StatelessWidget {
                     )
                 ),
                 AppDoubleText(bigText: "Stays", smallText: "View all", onClick: () => Navigator.pushNamed(context, "all_tickets")),
-                const Stays(),
+                SizedBox(height: 20,),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                    child:
+                Row(
+                  children: [
+                    Stays(),
+
+                    Stays(),
+                  ],
+                )
+                ),
               ],
             ),
           ),
