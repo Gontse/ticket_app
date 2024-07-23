@@ -17,7 +17,7 @@ class AllTickets extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
                 children: ticketList
-                    .map((ticket) => TicketView(ticket: ticket))
+                    .map((ticket) => TicketView(ticket: ticket, isWholeScreen: true,))
                     .toList()),
           ),
         ],

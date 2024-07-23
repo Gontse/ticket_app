@@ -12,7 +12,8 @@ import 'package:ticket_app/res/Styles/app_styles.dart';
 
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
-  const TicketView({super.key, required this.ticket});
+  final bool isWholeScreen;
+  const TicketView({super.key, required this.ticket, this.isWholeScreen = false});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class TicketView extends StatelessWidget {
         width: size.width * 0.85,
         height: 250,
         child: Container(
-          margin: const EdgeInsets.only(right: 16),
+          margin: EdgeInsets.only(right: isWholeScreen ? 0 : 16),
           child: Column(
             children: [
               Container(
