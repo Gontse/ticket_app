@@ -4,10 +4,10 @@ import 'package:ticket_app/res/Styles/app_styles.dart';
 import 'package:ticket_app/screens/all_tickets.dart';
 
 class AppDoubleText extends StatelessWidget {
-  const AppDoubleText({super.key, required this.bigText, required this.smallText });
-
   final String bigText;
   final String smallText;
+
+  const AppDoubleText({super.key, required this.bigText, required this.smallText });
 
   @override
   Widget build(BuildContext context) {
