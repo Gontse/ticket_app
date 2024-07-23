@@ -75,7 +75,8 @@ class HomeScreen extends StatelessWidget {
                       children: ticketList.map((ticket) => TicketView(ticket: ticket,)
                       ).toList()
                     )
-                )
+                ),
+                const AppDoubleText(bigText: "Stays", smallText: "View all"),
               ],
             ),
           ),

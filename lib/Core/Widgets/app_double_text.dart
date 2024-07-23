@@ -19,12 +19,7 @@ class AppDoubleText extends StatelessWidget {
           child:  Text(smallText, style: AppStyles.textStyle.copyWith(
             color: AppStyles.primaryColor
           )) ,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (BuildContext context) => const AllTickets() )
-            );
-          },
+          onTap: () => Navigator.pushNamed(context, "all_tickets"),
         )
       ],
     );
