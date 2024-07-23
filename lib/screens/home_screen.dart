@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     )),
                 const SizedBox(height: 40),
-                const AppDoubleText(bigText: "Upcoming Flights", smallText: "View all"),
+                AppDoubleText(bigText: "Upcoming Flights", smallText: "View all", onClick: () => Navigator.pushNamed(context, "all_tickets"),),
                 const SizedBox(
                   height: 20,
                 ),
@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                       ).toList()
                     )
                 ),
-                const AppDoubleText(bigText: "Stays", smallText: "View all"),
+                AppDoubleText(bigText: "Stays", smallText: "View all", onClick: () => Navigator.pushNamed(context, "all_tickets"),),
               ],
             ),
           ),
