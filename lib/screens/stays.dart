@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ticket_app/res/Styles/app_styles.dart';
 import 'package:ticket_app/res/media.dart';
 
-class Stays extends StatelessWidget {
-  const Stays({super.key});
+class Stay extends StatelessWidget {
+  final Map<String, dynamic> accomodation;
+  const Stay({super.key});
 
   @override
   Widget build(BuildContext context) {
