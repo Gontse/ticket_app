@@ -5,6 +5,35 @@ class AppTicketTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final size = MediaQuery.of(context).size;
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+            color: Color(0xFFF4F6FD)
+      ),
+      child: Row(
+        children: [
+         Container(
+           padding: EdgeInsets.symmetric(vertical: 7),
+            width: size.width*.44,
+           child:  Center(child: Text("Airline Tickets")),
+           decoration: BoxDecoration(
+             color: Colors.white,
+             borderRadius: BorderRadius.horizontal(left: Radius.circular(50))
+           ),
+         ),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 7),
+            width: size.width*.44,
+            child:  Center(child: Text("Accomodations")),
+            decoration: BoxDecoration(
+                color: Colors.transparent,
+                borderRadius: BorderRadius.horizontal(right: Radius.circular(50))
+            ),
+
+          ),
+        ],
+      ),
+    );
   }
 }
