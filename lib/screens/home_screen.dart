@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                     child:
                 Row(
-                  children: hotelList.map((accomodation) => Stay()).toList() ,
+                  children: hotelList.map((accomodation) => Stay(accomodation: accomodation)).toList() ,
                 )
                 ),
               ],

@@ -4,7 +4,8 @@ import 'package:ticket_app/res/media.dart';
 
 class Stay extends StatelessWidget {
   final Map<String, dynamic> accomodation;
-  const Stay({super.key});
+
+  const Stay({super.key, required this.accomodation});
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +22,31 @@ class Stay extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 180,
+              height: 180,
               decoration: BoxDecoration(
                   color: AppStyles.primaryColor,
                   borderRadius: BorderRadius.circular(12),
-                  image: const DecorationImage(
+                  image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage(AppMedia.hotelRoom)))),
-          SizedBox(height: 10,),
+                      image: AssetImage(
+                          "assets/images/${accomodation['image']}"
+                      )
+                  )
+              )
+          ),
+          const SizedBox(
+            height: 10,
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
-                "Open Space",
+              "Open Space",
               style: AppStyles.headlineStyle2.copyWith(color: Colors.white),
             ),
           ),
-          SizedBox(height: 5,),
+          SizedBox(
+            height: 5,
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
@@ -44,7 +54,9 @@ class Stay extends StatelessWidget {
               style: AppStyles.headlineStyle3.copyWith(color: Colors.white),
             ),
           ),
-          SizedBox(height: 5,),
+          SizedBox(
+            height: 5,
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(

@@ -188,4 +188,4 @@ List<Map<String, dynamic>> hotelList = [
     'destination': 'Dubai',
     'price': 6800
   }
-]
+];
