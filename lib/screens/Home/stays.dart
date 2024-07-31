@@ -28,19 +28,14 @@ class Stay extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage(
-                          "assets/images/${accomodation['image']}"
-                      )
-                  )
-              )
-          ),
+                      image: AssetImage("images/${accomodation['image']}")))),
           const SizedBox(
             height: 10,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
-              "Open Space",
+              accomodation['place'],
               style: AppStyles.headlineStyle2.copyWith(color: Colors.white),
             ),
           ),
@@ -50,7 +45,7 @@ class Stay extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
-              "Johannesburg",
+              accomodation['destination'],
               style: AppStyles.headlineStyle3.copyWith(color: Colors.white),
             ),
           ),
@@ -60,7 +55,7 @@ class Stay extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
-              "R1200/Night",
+              "R${accomodation['price']}/Night",
               style: AppStyles.headlineStyle2.copyWith(color: Colors.white),
             ),
           ),
