@@ -17,7 +17,7 @@ class SearchScreen extends StatelessWidget {
           fontSize: 35,
         ),),
         SizedBox(height: 20,),
-        const AppTicketTabs()
+        const AppTicketTab()
       ],
       ),
     );
