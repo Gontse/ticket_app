@@ -67,26 +67,37 @@ class HomeScreen extends StatelessWidget {
                       ],
                     )),
                 const SizedBox(height: 40),
-                AppDoubleText(bigText: "Upcoming Flights", smallText: "View all", onClick: () => Navigator.pushNamed(context, "all_tickets"),),
+                AppDoubleText(
+                  bigText: "Upcoming Flights",
+                  smallText: "View all",
+                  onClick: () => Navigator.pushNamed(context, "all_tickets"),
+                ),
                 const SizedBox(
                   height: 20,
                 ),
-               SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: ticketList.map((ticket) => TicketView(ticket: ticket,)
-                      ).toList()
-                    )
-                ),
-                AppDoubleText(bigText: "Stays", smallText: "View all", onClick: () => Navigator.pushNamed(context, "all_tickets")),
-               const SizedBox(height: 20,),
                 SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                    child:
-                Row(
-                  children: hotelList.map((accomodation) => Stay(accomodation: accomodation)).toList() ,
-                )
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                        children: ticketList
+                            .map((ticket) => TicketView(
+                                  ticket: ticket,
+                                ))
+                            .toList())),
+                AppDoubleText(
+                    bigText: "Stays",
+                    smallText: "View all",
+                    onClick: () => Navigator.pushNamed(context, "all_tickets")),
+                const SizedBox(
+                  height: 20,
                 ),
+                SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: hotelList
+                          .map((accomodation) =>
+                              Stay(accomodation: accomodation))
+                          .toList(),
+                    )),
               ],
             ),
           ),
