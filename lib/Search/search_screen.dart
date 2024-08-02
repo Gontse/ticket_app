@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_app/Core/Widgets/app_double_text.dart';
 import 'package:ticket_app/Search/Widgets/app_text_icon.dart';
 import 'package:ticket_app/Search/Widgets/app_ticket_tabs.dart';
 import 'package:ticket_app/Search/Widgets/find_Tickets.dart';
@@ -26,6 +27,13 @@ class SearchScreen extends StatelessWidget {
         const AppTextIcon(icon: Icons.flight_land_rounded, text: "Arrival"),
         const SizedBox(height: 30,),
         const FindTickets(),
+        const SizedBox(height: 30,),
+        AppDoubleText(
+          bigText: "Upcoming Flights",
+          smallText: "View all",
+          onClick: () => Navigator.pushNamed(context, "all_tickets"),
+        ),
+        const SizedBox(height: 30,),
       ],
       ),
     );
