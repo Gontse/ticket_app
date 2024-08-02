@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_app/res/Styles/app_styles.dart';
 
 class AppTextIcon extends StatelessWidget {
-  const AppTextIcon({super.key});
+  final IconData icon;
+  final String text;
+
+  const AppTextIcon({super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+      ),
+      child: Row(
+        children: [
+          Icon(icon, color: AppStyles.planeColor),
+          const SizedBox(width: 10,),
+          Text(text, style: AppStyles.textStyle)
+        ],
+      ),
+    );
   }
 }
