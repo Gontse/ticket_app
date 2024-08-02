@@ -10,6 +10,8 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: AppStyles.bgColor,
       body: ListView(
@@ -33,7 +35,27 @@ class SearchScreen extends StatelessWidget {
           smallText: "View all",
           onClick: () => Navigator.pushNamed(context, "all_tickets"),
         ),
-        const SizedBox(height: 30,),
+        const SizedBox(height: 10,),
+        Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              width: size.width*.42,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade200,
+                    blurRadius: 1,
+                    spreadRadius: 2,
+                  )
+                ]
+              ),
+              child: Text("A long text"),
+            )
+          ],
+        )
       ],
       ),
     );
