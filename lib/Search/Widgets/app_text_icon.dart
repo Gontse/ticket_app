@@ -14,7 +14,7 @@ class AppTextIcon extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
-      ),
+      ), 
       child: Row(
         children: [
           Icon(icon, color: AppStyles.planeColor),
