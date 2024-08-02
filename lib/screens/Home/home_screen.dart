@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                       height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage(AppMedia.logo))),
                     )
                   ],
@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                     )
                 ),
                 AppDoubleText(bigText: "Stays", smallText: "View all", onClick: () => Navigator.pushNamed(context, "all_tickets")),
-                SizedBox(height: 20,),
+               const SizedBox(height: 20,),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                     child:
