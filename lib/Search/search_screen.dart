@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ticket_app/Widgets/app_ticket_tabs.dart';
+import 'package:ticket_app/Search/Widgets/app_ticket_tabs.dart';
 import 'package:ticket_app/res/Styles/app_styles.dart';
 
 class SearchScreen extends StatelessWidget {

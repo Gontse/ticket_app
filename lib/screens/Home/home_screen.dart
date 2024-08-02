@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:ticket_app/Core/Widgets/Utils/TestData/all_json.dart';
 import 'package:ticket_app/Core/Widgets/app_double_text.dart';
 import 'package:ticket_app/res/media.dart';
-import 'package:ticket_app/screens/Home/stays.dart';
+import 'package:ticket_app/screens/Home/Widget/stays.dart';
 import '../../Core/Widgets/ticket_view.dart';
 import '../../res/Styles/app_styles.dart';
 
