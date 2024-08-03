@@ -154,6 +154,23 @@ class SearchScreen extends StatelessWidget {
                           "Take Love",
                           style: AppStyles.headlineStyle2
                               .copyWith(color: Colors.white),
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "😍",
+                              style: AppStyles.headlineStyle2,
+                            ),
+                            Text("🥰",
+                                style: AppStyles.headlineStyle1
+                                    .copyWith(fontSize: 35)),
+                            Text(
+                              "😘",
+                              style: AppStyles.headlineStyle2,
+                            ),
+                          ],
                         )
                       ],
                     ),
