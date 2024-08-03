@@ -110,7 +110,8 @@ class SearchScreen extends StatelessWidget {
                             Text(
                               "Discount\nfor survey",
                               style: AppStyles.headlineStyle2.copyWith(
-                                  fontWeight: FontWeight.bold, color: Colors.white),
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ),
                             const SizedBox(height: 10),
                             Text(
@@ -138,18 +139,22 @@ class SearchScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                 const SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Container(
-                    padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 15, horizontal: 15),
                     width: size.width * 0.44,
                     height: 210,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFEC6545),
-                      borderRadius: BorderRadius.circular(18)
-                    ),
+                        color: const Color(0xFFEC6545),
+                        borderRadius: BorderRadius.circular(18)),
                     child: Column(
                       children: [
-                        Text("Take Love",)
+                        Text(
+                          "Take Love",
+                          style: AppStyles.headlineStyle2
+                              .copyWith(color: Colors.white),
+                        )
                       ],
                     ),
                   )
