@@ -62,7 +62,7 @@ class SearchScreen extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                   width: size.width * .42,
-                  height: 405,
+                  height: 435,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
@@ -92,46 +92,65 @@ class SearchScreen extends StatelessWidget {
                       )
                     ],
                   )),
-              Stack(
+              Column(
                 children: [
+                  Stack(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 15, horizontal: 15),
+                        width: size.width * .44,
+                        height: 210,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: const Color(0xFF3AB8B8)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Discount\nfor survey",
+                              style: AppStyles.headlineStyle2.copyWith(
+                                  fontWeight: FontWeight.bold, color: Colors.white),
+                            ),
+                            const SizedBox(height: 10),
+                            Text(
+                              "Take the survey about services and get discount",
+                              style: AppStyles.headlineStyle2.copyWith(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                  fontSize: 18),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        right: -45,
+                        top: -40,
+                        child: Container(
+                          padding: const EdgeInsets.all(30),
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                width: 18,
+                                color: AppStyles.circleColor,
+                              )),
+                        ),
+                      )
+                    ],
+                  ),
+                 const SizedBox(height: 15),
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 15, horizontal: 15),
-                    width: size.width * .44,
+                    padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                    width: size.width * 0.44,
                     height: 210,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: const Color(0xFF3AB8B8)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Discount\nfor survey",
-                          style: AppStyles.headlineStyle2.copyWith(
-                              fontWeight: FontWeight.bold, color: Colors.white),
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          "Take the survey about services and get discount",
-                          style: AppStyles.headlineStyle2.copyWith(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                              fontSize: 18),
-                        ),
-                      ],
+                      color: const Color(0xFFEC6545),
+                      borderRadius: BorderRadius.circular(18)
                     ),
-                  ),
-                  Positioned(
-                    right: -45,
-                    top: -40,
-                    child: Container(
-                      padding: const EdgeInsets.all(30),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            width: 18,
-                            color: const Color(0xFF189999),
-                          )),
+                    child: Column(
+                      children: [
+                        Text("Take Love",)
+                      ],
                     ),
                   )
                 ],
