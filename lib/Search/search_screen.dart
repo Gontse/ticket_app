@@ -11,9 +11,7 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery
-        .of(context)
-        .size;
+    final size = MediaQuery.of(context).size;
 
     return Scaffold(
       backgroundColor: AppStyles.bgColor,
@@ -62,7 +60,7 @@ class SearchScreen extends StatelessWidget {
             children: [
               Container(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                   width: size.width * .42,
                   height: 405,
                   decoration: BoxDecoration(
@@ -85,56 +83,56 @@ class SearchScreen extends StatelessWidget {
                                 image: AssetImage(AppMedia.planSit),
                                 fit: BoxFit.cover)),
                       ),
-                      const SizedBox(height: 10,),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         "20% discount on the early booking of this flight. Don't Miss out",
-                        style: AppStyles.headlineStyle2,)
-                    ],
-                  )),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Stack(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                        width: size.width * .44,
-                        height: 210,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: const Color(0xFF3AB8B8)
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("Discount\nfor survey",
-                              style: AppStyles.headlineStyle2.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white
-                              ),),
-                            const SizedBox(height: 10),
-                            Text("Take the survey about services and get discount",
-                              style: AppStyles.headlineStyle2.copyWith(
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                  fontSize: 18
-
-                              ),),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(30),
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              width: 18,
-                              color: const Color(0xFF1899999),
-
-                            )
-                        ),
+                        style: AppStyles.headlineStyle2,
                       )
                     ],
+                  )),
+              Stack(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 15, horizontal: 15),
+                    width: size.width * .44,
+                    height: 210,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color(0xFF3AB8B8)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Discount\nfor survey",
+                          style: AppStyles.headlineStyle2.copyWith(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          "Take the survey about services and get discount",
+                          style: AppStyles.headlineStyle2.copyWith(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                              fontSize: 18),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    right: -45,
+                    top: -40,
+                    child: Container(
+                      padding: const EdgeInsets.all(30),
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            width: 18,
+                            color: const Color(0xFF189999),
+                          )),
+                    ),
                   )
                 ],
               )
