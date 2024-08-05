@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/res/Styles/app_styles.dart';
+import 'package:ticket_app/screens/Search/Widgets/app_ticket_tabs.dart';
 
 class TicketScreen extends StatelessWidget {
   const TicketScreen({super.key});
@@ -14,7 +15,8 @@ class TicketScreen extends StatelessWidget {
           Text(
             "Tickets",
             style: AppStyles.headlineStyle1,
-          )
+          ),
+          AppTabs(),
         ],
       ),
     );
