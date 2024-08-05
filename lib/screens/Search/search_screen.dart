@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/Core/Widgets/app_double_text.dart';
-import 'package:ticket_app/Search/Widgets/app_text_icon.dart';
-import 'package:ticket_app/Search/Widgets/app_ticket_tabs.dart';
-import 'package:ticket_app/Search/Widgets/find_Tickets.dart';
 import 'package:ticket_app/res/Styles/app_styles.dart';
 import 'package:ticket_app/res/media.dart';
+import 'Widgets/app_text_icon.dart';
+import 'Widgets/app_ticket_tabs.dart';
+import 'Widgets/find_Tickets.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
