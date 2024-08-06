@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ticket_app/Core/Widgets/Utils/TestData/all_json.dart';
 import 'package:ticket_app/Core/Widgets/app_layoutbuilder.dart';
 import 'package:ticket_app/Core/Widgets/big_circle.dart';
@@ -44,15 +42,16 @@ class TicketView extends StatelessWidget {
                     // Departure/Destination names
                     Row(
                       children: [
-                        TextStyleThird(text: ticket["from"]["code"], isColor: true,),
+                        TextStyleThird(text: ticket["from"]["code"], isColor: isColor,),
                         Expanded(child: Container()),
                         BigDot(isColor: isColor),
                         Expanded(
                             child: Stack(children: [
-                          const SizedBox(
+                           SizedBox(
                               height: 24,
                               child: AppLayoutBuilderWidget(
                                 randomDivider: 5,
+                                isColor: isColor
                               )),
                           Center(
                             child: Transform.rotate(
@@ -66,7 +65,7 @@ class TicketView extends StatelessWidget {
                         ])),
                         BigDot(isColor: isColor),
                         Expanded(child: Container()),
-                        TextStyleThird(text: ticket["to"]["code"]),
+                        TextStyleThird(text: ticket["to"]["code"], isColor: isColor,),
                       ],
                     ),
                     const SizedBox(
@@ -79,8 +78,9 @@ class TicketView extends StatelessWidget {
                           width: 100,
                           child: Text(
                             ticket["from"]["name"],
-                            style: AppStyles.headlineStyle4
-                                .copyWith(color: Colors.white),
+                            style: isColor == null
+                                ? AppStyles.headlineStyle4.copyWith(color: Colors.white)
+                                : AppStyles.headlineStyle4.copyWith(color: Colors.black),
                           ),
                         ),
                         Expanded(child: Container()),

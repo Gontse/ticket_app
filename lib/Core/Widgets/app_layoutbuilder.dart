@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_app/res/Styles/app_styles.dart';
 
 class AppLayoutBuilderWidget extends StatelessWidget {
   final bool? isColor;
@@ -24,8 +25,8 @@ class AppLayoutBuilderWidget extends StatelessWidget {
             (index) => SizedBox(
                   width: width,
                   height: 1,
-                  child: const DecoratedBox(
-                    decoration: BoxDecoration(color: Colors.white),
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(color: isColor == null ? Colors.white : AppStyles.ticketBigDotSecondaryColor),
                   ),
                 )),
       );
