@@ -2,10 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppLayoutBuilderWidget extends StatelessWidget {
+  final bool? isColor;
   final double width;
   final int randomDivider;
 
-  const AppLayoutBuilderWidget({super.key, required this.randomDivider, this.width = 3});
+  const AppLayoutBuilderWidget({
+    super.key,
+    required this.randomDivider,
+    this.width = 3,
+    this.isColor});
 
   @override
   Widget build(BuildContext context) {
