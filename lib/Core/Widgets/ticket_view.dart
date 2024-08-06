@@ -134,9 +134,9 @@ class TicketView extends StatelessWidget {
                     color: isColor == null
                         ? AppStyles.ticketOrange
                         : AppStyles.ticketWhite,
-                    borderRadius: const BorderRadius.only(
-                        bottomLeft: Radius.circular(21),
-                        bottomRight: Radius.circular(21))),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(isColor == null ? 21 : 0),
+                        bottomRight: Radius.circular(isColor == null ? 21 : 0))),
                 child: Center(
                     child: Column(
                   children: [

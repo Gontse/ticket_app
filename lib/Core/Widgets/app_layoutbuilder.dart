@@ -26,7 +26,7 @@ class AppLayoutBuilderWidget extends StatelessWidget {
                   width: width,
                   height: 1,
                   child: DecoratedBox(
-                    decoration: BoxDecoration(color: isColor == null ? Colors.white : AppStyles.ticketBigDotSecondaryColor),
+                    decoration: BoxDecoration(color: isColor == null ? Colors.white : Colors.grey),
                   ),
                 )),
       );
