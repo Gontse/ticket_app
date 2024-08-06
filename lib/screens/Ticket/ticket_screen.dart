@@ -8,6 +8,7 @@ class TicketScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppStyles.bgColor,
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         children: [
@@ -16,8 +17,9 @@ class TicketScreen extends StatelessWidget {
             "Tickets",
             style: AppStyles.headlineStyle1,
           ),
+          SizedBox(height: 20,),
           Row(children: [
-            const AppTabs(tabText: "All Tickets", ),
+            const AppTabs(tabText: "All Tickets", isTabSelected: true),
             const AppTabs(tabText: "Hotel", tabBorder: true,),
           ],)
 
