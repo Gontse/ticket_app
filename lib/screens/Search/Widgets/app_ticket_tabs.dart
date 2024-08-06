@@ -41,7 +41,7 @@ class AppTabs extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 7),
       width: size.width * .44,
       decoration: BoxDecoration(
-          color: isTabSelected ? Colors.transparent: Colors.white,
+          color: isTabSelected ? Colors.transparent : Colors.white,
           borderRadius: tabBorder == false
               ? const BorderRadius.horizontal(left: Radius.circular(50))
               : const BorderRadius.horizontal(right: Radius.circular(50))),
