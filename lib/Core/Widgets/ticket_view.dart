@@ -148,7 +148,7 @@ class TicketView extends StatelessWidget {
                             textAlign: TextAlign.end,
                             ticket["number"].toString(),
                             style: AppStyles.headlineStyle3
-                                .copyWith(color: Colors.white),
+                                .copyWith(color: isColor == null ? Colors.white : Colors.black),
                           ),
                         ),
                       ],
@@ -162,19 +162,19 @@ class TicketView extends StatelessWidget {
                         Text(
                           "Date",
                           style: AppStyles.headlineStyle4
-                              .copyWith(color: Colors.white),
+                              .copyWith(color:isColor == null ? Colors.white : Colors.black),
                         ),
                         Expanded(child: Container()),
                         Text(
                           "Departure",
                           style: AppStyles.headlineStyle4
-                              .copyWith(color: Colors.white),
+                              .copyWith(color: isColor == null ? Colors.white : Colors.black),
                         ),
                         Expanded(child: Container()),
                         Text(
                           "Number",
                           style: AppStyles.headlineStyle4
-                              .copyWith(color: Colors.white),
+                              .copyWith(color: isColor == null ? Colors.white : Colors.black),
                         ),
                       ],
                     )
