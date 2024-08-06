@@ -12,6 +12,7 @@ class AppStyles {
   static Color findTicketColor = const Color(0xD91130CE);
   static Color circleColor = const Color(0xFF189999);
   static Color ticketWhite = const Color(0x00ffffff);
+  static Color ticketBigDotSecondaryColor = const Color(0xFF8ACCF7);
 
   static TextStyle textStyle = TextStyle(
       fontSize: 16,

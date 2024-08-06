@@ -46,7 +46,7 @@ class TicketView extends StatelessWidget {
                       children: [
                         TextStyleThird(text: ticket["from"]["code"], isColor: true,),
                         Expanded(child: Container()),
-                        const BigDot(),
+                        BigDot(isColor: isColor),
                         Expanded(
                             child: Stack(children: [
                           const SizedBox(
@@ -57,14 +57,14 @@ class TicketView extends StatelessWidget {
                           Center(
                             child: Transform.rotate(
                               angle: 1.5,
-                              child: const Icon(
+                              child: Icon(
                                 Icons.local_airport_rounded,
-                                color: Colors.white,
+                                color: AppStyles.ticketBigDotSecondaryColor,
                               ),
                             ),
                           )
                         ])),
-                        const BigDot(),
+                        BigDot(isColor: isColor),
                         Expanded(child: Container()),
                         TextStyleThird(text: ticket["to"]["code"]),
                       ],
