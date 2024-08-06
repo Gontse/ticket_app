@@ -110,7 +110,7 @@ class TicketView extends StatelessWidget {
               ),
               Container(
                 height: 20,
-                color: AppStyles.ticketOrange,
+                color: isColor == null ? AppStyles.ticketOrange : AppStyles.ticketWhite,
                 child: const Row(
                   children: [
                     BigCircle(
@@ -119,6 +119,7 @@ class TicketView extends StatelessWidget {
                     Expanded(
                         child: AppLayoutBuilderWidget(
                       randomDivider: 20,
+                      isColor: true,
                       width: 6,
                     )),
                     BigCircle(

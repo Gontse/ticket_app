@@ -13,7 +13,7 @@ class BigCircle extends StatelessWidget {
       width: 10,
       child: DecoratedBox(
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppStyles.bgColor,
             borderRadius: isRight == true
                 ? const BorderRadius.only(
                 topRight: Radius.circular(10),
