@@ -13,7 +13,12 @@ import 'package:ticket_app/res/Styles/app_styles.dart';
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
   final bool isWholeScreen;
-  const TicketView({super.key, required this.ticket, this.isWholeScreen = false});
+  final bool? isColor;
+  const TicketView({
+    super.key,
+    required this.ticket,
+    this.isWholeScreen = false,
+    this.isColor});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +33,9 @@ class TicketView extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                    color: AppStyles.ticketBlue,
-                    borderRadius: const BorderRadius.only(
+                    color: isColor == null ? AppStyles.ticketBlue : AppStyles.ticketWhite,
+
+                    borderRadius:  const BorderRadius.only(
                         topLeft: Radius.circular(21),
                         topRight: Radius.circular(21))),
                 child: Center(
@@ -38,7 +44,7 @@ class TicketView extends StatelessWidget {
                     // Departure/Destination names
                     Row(
                       children: [
-                        TextStyleThird(text: ticket["from"]["code"],),
+                        TextStyleThird(text: ticket["from"]["code"], isColor: true,),
                         Expanded(child: Container()),
                         const BigDot(),
                         Expanded(
