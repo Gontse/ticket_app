@@ -17,8 +17,8 @@ class TicketScreen extends StatelessWidget {
             style: AppStyles.headlineStyle1,
           ),
           Row(children: [
-            const AppTabs(tabText: "All Tickets",),
-            const AppTabs(tabText: "Hotel",),
+            const AppTabs(tabText: "All Tickets", ),
+            const AppTabs(tabText: "Hotel", tabBorder: true,),
           ],)
 
         ],
