@@ -84,11 +84,11 @@ class TicketView extends StatelessWidget {
                           ),
                         ),
                         Expanded(child: Container()),
-                         TextStyleFourth(text: ticket["flying_time"]),
+                         TextStyleFourth(text: ticket["flying_time"], isColor: isColor,),
                         Expanded(child: Container()),
                          SizedBox(
                           width: 100,
-                          child: TextStyleFourth(text: ticket["to"]["name"]),
+                          child: TextStyleFourth(text: ticket["to"]["name"], isColor: isColor,),
                         ),
                       ],
                     )
@@ -109,7 +109,7 @@ class TicketView extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                    color: AppStyles.ticketOrange,
+                    color: isColor == null ? AppStyles.ticketOrange : AppStyles.ticketWhite,
                     borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(21),
                         bottomRight: Radius.circular(21))),
@@ -123,8 +123,10 @@ class TicketView extends StatelessWidget {
                           width: 80,
                           child: Text(
                           ticket["date"],
-                            style: AppStyles.headlineStyle3
-                                .copyWith(color: Colors.white),
+                            style: AppStyles.headlineStyle3.copyWith(
+                                color: isColor == null
+                                    ? Colors.white
+                                    : Colors.black),
                           ),
                         ),
                         Expanded(child: Container()),
@@ -133,7 +135,11 @@ class TicketView extends StatelessWidget {
                            SizedBox(
                               height: 24,
                               child: Container(),),
-                          Center(child: Text(ticket["departure_time"], style: AppStyles.headlineStyle4.copyWith(color: Colors.white),))
+                          Center(child: Text(ticket["departure_time"],
+                            style: AppStyles.headlineStyle4.copyWith(
+                                color: isColor == null
+                                    ? Colors.white
+                                    : Colors.black),))
                         ])),
                         Expanded(child: Container()),
                         SizedBox(
